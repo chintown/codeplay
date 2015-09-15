@@ -1,0 +1,22 @@
+Usage:
+    codeplay [-n | --no-append] [-a | --all-append] [<files_ptn>] [<cmd_ptn>]
+
+Examples:
+    codeplay # watch all files. execute the changing one by guessing executable
+    codeplay '*.py' # watch python files. execute the changing one by guessing executable
+    codeplay '*.py' '?' # watch python files. execute the changing one by guessing executable
+    codeplay '*.py' 'python' # watch all files. execute the changing one with 'python'
+
+    codeplay -n '*.txt' 'du -hs' # watch all files. execute without files
+    codeplay -a '*.js' 'java -jar yuicompressor.jar -o min.js' # watch all files. execute with all files
+
+Options:
+    -h --help        Show this. [default: False]
+    -n --no-append   No file argument in command. [default: False]
+    -a --all-append  Put all files as arguments in command. [default: False]
+
+Arguments:
+    <files_ptn>     Quote it to avoid bash expansion
+
+    <cmd_ptn>       1. Decided by type of changing file, or assigned explicitly.
+                    2. Use '?' to guess executable by the file type of triggering file.
