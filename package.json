@@ -1,0 +1,37 @@
+{
+  "name": "codeplay",
+  "version": "1.0.0",
+  "description": "A simple REPL tool for simple task",
+  "keywords": [
+    "watcher",
+    "repl"
+  ],
+  "author": {
+    "name": "Mike Chen",
+    "email": "chintown@gmail.com"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "bin": {
+    "codeplay": "bin/cmd.js"
+  },
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/chintown/codeplay.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chintown/codeplay/issues"
+  },
+  "dependencies": {
+    "chokidar": "^1.0.5",
+    "docopt-js": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "mocha": "^2.3.2",
+    "sinon": "^1.16.1"
+  }
+}
