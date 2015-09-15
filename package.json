@@ -1,7 +1,7 @@
 {
   "name": "codeplay",
   "version": "1.0.0",
-  "description": "A simple REPL tool for simple task",
+  "description": "A simple code watcher",
   "keywords": [
     "watcher",
     "repl"
