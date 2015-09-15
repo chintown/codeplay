@@ -1,4 +1,4 @@
-Code Play
+codeplay
 =========
 **A simple code watcher**
 
