@@ -45,8 +45,8 @@ CodePlay.prototype = {
         try {
           self.callback(path);
         } catch (e) {
-          self.log(e);
-          self.stop();
+          self.log('[ERROR] ' + e);
+          // self.stop();
         }
       });
   },
