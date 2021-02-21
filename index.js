@@ -67,7 +67,7 @@ CodePlay.prototype = {
     if (cmdPtn.indexOf('?') !== -1) {
       cmdPtn = this.guessExecutable(cmdPtn, fn);
     }
-    return cmdPtn.replace('!', fn);
+    return cmdPtn.replace(/\!/g, fn);
   },
   'guessExecutable': function(cmd, fn) {
     var main = '';
@@ -92,8 +92,12 @@ CodePlay.prototype = {
     var self = this;
     var cmd = this.completeCmd(fn);
     subProcess.exec(cmd, function(error, stdout, stderr) {
-      self.log(stdout);
-      self.log(stderr);
+      if (error) {
+        self.log(error);
+      } else {
+        self.log(stdout);
+        self.log(stderr);
+      }
     });
 
     self.log();
